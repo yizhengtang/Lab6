@@ -5,7 +5,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         int []anArray;
-        int i, num = 100;
+        int i , num = 100, counter = 0;
 
         anArray = new int [10];
 
@@ -15,10 +15,7 @@ public class Main {
             num+=100;
         }
 
-        for (i = 0; i < 10 ; i ++)
-        {
-            System.out.println("Element in index " + i + ": " + anArray[i]);
-        }
+        method(anArray, counter);
 
         try
         {
@@ -31,5 +28,14 @@ public class Main {
             System.out.println("Error, exceeding the array.");
         }
 
+    }
+
+    static void method(int [] anArray, int counter)
+    {
+        for (int value: anArray)
+        {
+            System.out.println("Element at index " + counter + ": " + value);
+            counter++;
+        }
     }
 }
