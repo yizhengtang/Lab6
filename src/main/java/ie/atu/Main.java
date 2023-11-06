@@ -1,9 +1,9 @@
 package ie.atu;
 
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
         int []anArray;
         int i, num = 100;
 
@@ -18,6 +18,17 @@ public class Main {
         for (i = 0; i < 10 ; i ++)
         {
             System.out.println("Element in index " + i + ": " + anArray[i]);
+        }
+
+        try
+        {
+            System.out.println("Please enter element in index 10: ");
+            anArray[10] = scan.nextInt();
+        }
+
+        catch (ArrayIndexOutOfBoundsException a)
+        {
+            System.out.println("Error, exceeding the array.");
         }
 
     }
